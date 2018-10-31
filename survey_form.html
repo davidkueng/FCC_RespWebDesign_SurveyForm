@@ -19,35 +19,65 @@
 
 <div id="main-container">
 
+<p>Let me know how awesome this form is</p>
+
 <form action="" id="survey-form">
-
-    <!-- Add placeholders for inputs -->
-    <label for="name" id="name-label"></label>
-    <input type="text" id="name">
-
-    <!-- if email is not formatted correctly => HTML5 validation error -->
-    <label for="email" id="email-label"></label>
-    <input type="text" id="email">
     
-    <!-- if non-number is entered or outside of range of nr input => HTML5 validation error -->
-    <label for="number" id="number-label"></label>
-    <input type="text" id="number">
+    <div class="boxes">
+        <label for="name" id="name-label">*Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        
+        <label for="email" id="email-label">*E-Mail:</label>
+        <input type="email" id="email" placeholder="exemple@email.com" required>    
+        
+        <label for="number" id="number-label">*Age:</label>
+        <input type="number" id="number" name="quantity" min="1" max="99" required>
+    </div>
 
-    <!-- use a DROPDOWN element
-    use a RADIO BUTTONS and group them with name attribute
-    use CHECKBOXES which have the value attribute -->
+    <div class="boxes">
+    <label for="dropdown" id="role-dropdown">Which option best describes your current role?</label>
+        <div class="dropdown">            
+                <select class="drop-content">
+                    <option id="drop-placeholder">Choose an option</option>
+                    <option>Student</option>
+                    <option>Working full time</option>
+                    <option>Working part time</option>
+                </select>
+        </div>
+    </div>
 
-    <input type="textarea">
+    <div class="boxes">
+        <label for="choosing-one">How likely would you use this form? 
+            <input type="radio" name="choosing-one">Very likely!
+            <input type="radio" name="choosing-one">Maybe            
+            <input type="radio" name="choosing-one">Not likely
+        </label>
+    </div>
     
-    <button id="submit">SUBMIT</button>
+    <div class="boxes">
+        <label for="choose-several">What would you improve with this form? (several answers possible)
+            <input type="checkbox" name="choosing-several">Design
+            <input type="checkbox" name="choosing-several">Functionality
+            <input type="checkbox" name="choosing-several">User experience
+            <input type="checkbox" name="choosing-several">Colors
+            <input type="checkbox" name="choosing-several">Typos    
+            <input type="checkbox" name="choosing-several">Fonts    
+        </label>   
+    </div>
+
+    <div class="boxes">
+        <label for="comments">Do you have any comments?
+            <textarea type="textarea" placeholder="Enter your text here..."></textarea>
+        </label>
+    </div>
+
+    <div class="boxes">
+        <button type="submit" id="submit">SUBMIT</button>
+    </div>
 
 </form>
 
 </div>
-
-
-
-
 
 </body>
 </html>
