@@ -6,78 +6,92 @@
     <title>Survey Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="survey_form.css" />    
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
 </head>
 <body>
+
+    <header id="header">
     
-<header id="header">
-
-<h1 id="title">Survey Form</h1>
-
-<p id="description"></p>
-
-</header>
-
-<div id="main-container">
-
-<p>Let me know how awesome this form is!</p>
-
-<form action="" id="survey-form">
+    <h1 id="title">Survey Form</h1>
     
-    <div class="boxes">
-        <label for="name" id="name-label">*Name:</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
+    <p id="description">Let me know how awesome this form is!</p>
+    
+    </header>
+    
+        <div id="main-container">
+    
+            <form action="" id="survey-form">
         
-        <label for="email" id="email-label">*E-Mail:</label>
-        <input type="email" id="email" placeholder="exemple@email.com" required>    
-        
-        <label for="number" id="number-label">*Age:</label>
-        <input type="number" id="number" name="quantity" min="1" max="99" required>
-    </div>
-
-    <div class="boxes">
-    <label for="dropdown" id="role-dropdown">Which option best describes your current role?</label>
-        <div class="dropdown">            
-                <select class="drop-content">
-                    <option id="drop-placeholder">Choose an option</option>
-                    <option>Student</option>
-                    <option>Working full time</option>
-                    <option>Working part time</option>
-                </select>
+                <div class="boxes">
+                    <div class="label-side">
+                        <label for="name" id="name-label">*Name:</label>
+                    </div>
+                    <div class="input-side">
+                        <input type="text" class="input" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="label-side">
+                        <label for="email" id="email-label">*E-Mail:</label>
+                    </div>
+                    <div class="input-side">
+                        <input type="email" class="input" id="email" placeholder="exemple@email.com" required>    
+                    </div>
+                    <div class="label-side">
+                        <label for="number" id="number-label">*Age:</label>
+                    </div>
+                    <div class="input-side">
+                        <input type="number" class="input" id="number" placeholder="0-99" min="1" max="99" required>
+                    </div>
+                </div>
+    
+                <div class="boxes">
+                    <div class="label-side">
+                        <label for="dropdown">Which option best describes your current role?</label>
+                    </div>
+                        <div class="input-side">
+                            <div id="dropdown">            
+                                <select class="drop-content">
+                                    <option id="drop-placeholder" disabled>Choose an option</option>
+                                    <option>Student</option>
+                                    <option>Working full time</option>
+                                    <option>Working part time</option>
+                                </select>
+                        </div>
+                    </div>
+                </div>    
+    
+                <div class="boxes">        
+                    <p>How likely would you use this form?</p>             
+                        <div class="btns">                
+                            <label for="first-option"><input type="radio" name="choose-one" value="0"/>Absolutely</label>                
+                            <label for="second option"><input type="radio" name="choose-one" value="1" />Maybe</label>                
+                            <label for="third option"><input type="radio" name ="choose-one" value="3" />Never</label>
+                        </div>            
+                    
+                    
+                </div>
+                
+                <div class="boxes">
+                    <p>What would you improve with this form? (several answers possible)</p>
+                        <div class="btns">
+                            <label for="checkbx01"><input type="checkbox" value="0">Design</label>
+                            <label for="checkbx01"><input type="checkbox" value="1">Functionality</label>
+                            <label for="checkbx01"><input type="checkbox" value="2">User experience</label>
+                            <label for="checkbx01"><input type="checkbox" value="3">Colors</label>
+                            <label for="checkbx01"><input type="checkbox" value="4">Typos</label>
+                            <label for="checkbx01"><input type="checkbox" value="5">Fonts</label>
+                        </div>
+                    
+                </div>
+    
+                <div class="boxes">
+                    <p>Do you have any comments?</p>       
+                        <textarea type="textarea" placeholder="Enter your text here..."></textarea>      
+                </div>
+    
+                <div class="boxes" id="submit">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
-    </div>
-
-    <div class="boxes">
-        <label for="choosing-one">How likely would you use this form? 
-            <input type="radio" name="choosing-one">Very likely!
-            <input type="radio" name="choosing-one">Maybe            
-            <input type="radio" name="choosing-one">Not likely
-        </label>
-    </div>
-    
-    <div class="boxes">
-        <label for="choose-several">What would you improve with this form? (several answers possible)
-            <input type="checkbox" name="choosing-several">Design
-            <input type="checkbox" name="choosing-several">Functionality
-            <input type="checkbox" name="choosing-several">User experience
-            <input type="checkbox" name="choosing-several">Colors
-            <input type="checkbox" name="choosing-several">Typos    
-            <input type="checkbox" name="choosing-several">Fonts    
-        </label>   
-    </div>
-
-    <div class="boxes">
-        <label for="comments">Do you have any comments?
-            <textarea type="textarea" placeholder="Enter your text here..."></textarea>
-        </label>
-    </div>
-
-    <div class="boxes">
-        <button type="submit" id="submit">SUBMIT</button>
-    </div>
-
-</form>
-
-</div>
-
 </body>
 </html>

@@ -1,30 +1,75 @@
 body {
     margin: 0 auto;
-    width: 50%;
+    width: 50%;    
+    font-family: 'Catamaran', sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    text-align: center;
+    font-family: 'Catamaran', sans-serif;    
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 5px;
 }
 
 textarea {
+    width: 300px;
+    height: 150px;
     padding: 10px;
     line-height: 1.5;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px #999;
-} 
+}
 
-form {
-    display: grid;
+label {
+    display: right;
+}
+
+button {
+    border-radius: 3px ;
 }
 
 .boxes {
     padding: 10px;
 }
 
-/* #survey-form {  
-    display: grid;
+.label-side {   
+    float: left;      
+    padding-right: 2ex;
+    padding-top: 2ex;
+}
 
-} */
+.input-side {
+    padding-top: 2ex;
+}
 
-   
+.btns label {
+    display: block;
+}
+
+#main-container {
+    margin: 0 auto; 
+    max-width: 500px;
+}
+
+#description {
+    margin: 0;
+}
+
+#submit {
+    margin-left: 124px;
+}
+
+#number {
+    margin-left: 15px;
+}
 
 
 
